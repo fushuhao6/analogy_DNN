@@ -58,9 +58,6 @@ val_dataset = AnalogyDataset(root_path, list_file=val_list,
                                  transforms.Normalize(mean, std),
                              ]), mask_whole=args.mask_whole, cand_num=args.cand_num)
 
-trainloader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True, num_workers=16)
-valloader = DataLoader(val_dataset, batch_size=args.batch_size, shuffle=False, num_workers=16)
-
 test_dataset = TestCarDataset(test_path, transform=transforms.Compose([
                              transforms.ToTensor(),
                              transforms.Normalize(mean, std),
