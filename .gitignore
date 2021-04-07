@@ -1,2 +1,7 @@
 *pycache*
 .idea
+pcm/*
+!pcm/*.py
+!pcm/data/
+pcm/data/*
+!pcm/data/pascal_seg_colormap.mat
